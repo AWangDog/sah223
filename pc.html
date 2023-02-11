@@ -4,12 +4,14 @@
 <meta charset="utf-8">
 </head>
 <body>
-<script language="php">
-if (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false) {
-<script language="html"><p>请用浏览器打开</p></script>
-} else {
-<script language="javascript">window.open ('index.html')</script>
-<html><meta http-equiv="refresh" content="0;url=https://m.bilibili.com/video/av546403908"></html>
+<script language="javascript">
+var ua = navigator.userAgent.toLowerCase();
+var isWeixin = ua.indexOf('micromessenger') != -1;
+if (isWeixin) {
+<html><p>请用浏览器打开</p></html>;
+}else{
+window.open ('index.html')</script>;
+<html><meta http-equiv="refresh" content="0;url=https://m.bilibili.com/video/av546403908"></html>;
 }
 </script>
 </body>
