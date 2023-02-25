@@ -1,12 +1,27 @@
-<script type="text/javascript">
-    var system ={};  
-       var p = navigator.platform;       
-       system.win = p.indexOf("Win") == 0;  
-       system.mac = p.indexOf("Mac") == 0;  
-       system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);     
-       if(system.win||system.mac||system.xll){//如果是电脑跳转到
-               window.location.href="pc.html";  
-       }else{  //如果是手机,跳转到
-              window.location.href="move.html";  
-       }
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<script language="javascript">
+	var system ={};  
+	var p = navigator.platform;       
+	system.win = p.indexOf("Win") == 0;  
+	system.mac = p.indexOf("Mac") == 0;  
+	system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);     
+	if(system.win||system.mac||system.xll){//如果是电脑跳转到
+		var ua = navigator.userAgent.toLowerCase();
+		var isWeixin = ua.indexOf('micromessenger') != -1;
+		if (isWeixin) {
+			document.write("请用浏览器打开");
+		}else{
+			window.open ('index.html');
+			<meta http-equiv="refresh" content="0;url=https://m.bilibili.com/video/av546403908">;
+		};  
+	}else{  //如果是手机,则
+		document.write("请用电脑浏览器打开");  
+	}
 </script>
+</body>
+</html>
